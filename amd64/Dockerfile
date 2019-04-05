@@ -5,6 +5,6 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint.sh /usr/sbin
-
+RUN chmod 755 /usr/sbin/entrypoint.sh
 
 ENTRYPOINT ["/usr/sbin/entrypoint.sh"]
